@@ -1,0 +1,25 @@
+.dg-pager > td {
+    text-align: center;
+}
+
+.dg-pager > td > span,.dg-pager > td > a{
+    display: inline-block;
+    font-size: 12pt;
+    background: rgba(0,0,0,.1);
+    border-radius: 4px;
+    padding: 3px 8px;
+}
+.dg-pager > td > span {
+    background: rgba(0,0,0,.6);
+    color: #FFF;
+}
+.datepicker td span {
+    width: 42px;
+}
+
+.table-centered td, .table-centered th {
+    text-align: center !important;
+}
+.panel-heading .btn {
+    margin-top: -5px;
+}

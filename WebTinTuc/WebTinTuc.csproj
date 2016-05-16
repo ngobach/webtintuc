@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA4D8107-B128-423C-934F-27514F3E6E6D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebTinTuc</RootNamespace>
+    <AssemblyName>WebTinTuc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\assets\advanced-datatable\media\css\demo_page.css" />
+    <Content Include="admin\assets\advanced-datatable\media\css\demo_table.css" />
+    <Content Include="admin\assets\advanced-datatable\media\images\back_disabled.png" />
+    <Content Include="admin\assets\advanced-datatable\media\images\back_enabled.png" />
+    <Content Include="admin\assets\advanced-datatable\media\images\back_enabled_hover.png" />
+    <Content Include="admin\assets\advanced-datatable\media\images\forward_disabled.png" />
+    <Content Include="admin\assets\advanced-datatable\media\images\forward_enabled.png" />
+    <Content Include="admin\assets\advanced-datatable\media\images\forward_enabled_hover.png" />
+    <Content Include="admin\assets\advanced-datatable\media\images\sort_asc.png" />
+    <Content Include="admin\assets\advanced-datatable\media\images\sort_asc_disabled.png" />
+    <Content Include="admin\assets\advanced-datatable\media\images\sort_both.png" />
+    <Content Include="admin\assets\advanced-datatable\media\images\sort_desc.png" />
+    <Content Include="admin\assets\advanced-datatable\media\images\sort_desc_disabled.png" />
+    <Content Include="admin\assets\advanced-datatable\media\js\jquery.dataTables.js" />
+    <Content Include="admin\assets\bootstrap-colorpicker\css\colorpicker.css" />
+    <Content Include="admin\assets\bootstrap-colorpicker\img\alpha.png" />
+    <Content Include="admin\assets\bootstrap-colorpicker\img\hue.png" />
+    <Content Include="admin\assets\bootstrap-colorpicker\img\saturation.png" />
+    <Content Include="admin\assets\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="admin\assets\bootstrap-datepicker\css\datepicker.css" />
+    <Content Include="admin\assets\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="admin\assets\bootstrap-daterangepicker\date.js" />
+    <Content Include="admin\assets\bootstrap-daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="admin\assets\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="admin\assets\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="admin\assets\bootstrap-daterangepicker\moment.min.js" />
+    <Content Include="admin\assets\bootstrap-datetimepicker\css\datetimepicker.css" />
+    <Content Include="admin\assets\bootstrap-datetimepicker\js\bootstrap-datetimepicker.js" />
+    <Content Include="admin\assets\bootstrap-fileupload\bootstrap-fileupload.css" />
+    <Content Include="admin\assets\bootstrap-fileupload\bootstrap-fileupload.js" />
+    <Content Include="admin\assets\bootstrap-inputmask\bootstrap-inputmask.min.js" />
+    <Content Include="admin\assets\bootstrap-timepicker\compiled\timepicker.css" />
+    <Content Include="admin\assets\bootstrap-timepicker\js\bootstrap-timepicker.js" />
+    <Content Include="admin\assets\bootstrap-wysihtml5\bootstrap-wysihtml5.css" />
+    <Content Include="admin\assets\bootstrap-wysihtml5\bootstrap-wysihtml5.js" />
+    <Content Include="admin\assets\bootstrap-wysihtml5\wysihtml5-0.3.0.js" />
+    <Content Include="admin\assets\chart-master\Chart.js" />
+    <Content Include="admin\assets\ckeditor\ckeditor.js" />
+    <Content Include="admin\assets\data-tables\DT_bootstrap.css" />
+    <Content Include="admin\assets\data-tables\DT_bootstrap.js" />
+    <Content Include="admin\assets\data-tables\images\sort_asc.png" />
+    <Content Include="admin\assets\data-tables\images\sort_asc_disabled.html" />
+    <Content Include="admin\assets\data-tables\images\sort_both.png" />
+    <Content Include="admin\assets\data-tables\images\sort_desc.png" />
+    <Content Include="admin\assets\data-tables\images\sort_desc_disabled.html" />
+    <Content Include="admin\assets\data-tables\jquery.dataTables.js" />
+    <Content Include="admin\assets\dropzone\css\dropzone.css" />
+    <Content Include="admin\assets\dropzone\dropzone.js" />
+    <Content Include="admin\assets\dropzone\images\spritemap%402x.png" />
+    <Content Include="admin\assets\dropzone\images\spritemap.png" />
+    <Content Include="admin\assets\fancybox\source\blank.gif" />
+    <Content Include="admin\assets\fancybox\source\fancybox_loading.gif" />
+    <Content Include="admin\assets\fancybox\source\fancybox_overlay.png" />
+    <Content Include="admin\assets\fancybox\source\fancybox_sprite.png" />
+    <Content Include="admin\assets\fancybox\source\jquery.fancybox.css" />
+    <Content Include="admin\assets\fancybox\source\jquery.fancybox.js" />
+    <Content Include="admin\assets\file-uploader\css\jquery.fileupload-noscript.css" />
+    <Content Include="admin\assets\file-uploader\css\jquery.fileupload-ui-noscript.css" />
+    <Content Include="admin\assets\file-uploader\css\jquery.fileupload-ui.css" />
+    <Content Include="admin\assets\file-uploader\css\jquery.fileupload.css" />
+    <Content Include="admin\assets\file-uploader\img\loading.gif" />
+    <Content Include="admin\assets\file-uploader\img\progressbar.gif" />
+    <Content Include="admin\assets\file-uploader\js\jquery.fileupload-audio.js" />
+    <Content Include="admin\assets\file-uploader\js\jquery.fileupload-image.js" />
+    <Content Include="admin\assets\file-uploader\js\jquery.fileupload-process.js" />
+    <Content Include="admin\assets\file-uploader\js\jquery.fileupload-ui.js" />
+    <Content Include="admin\assets\file-uploader\js\jquery.fileupload-validate.js" />
+    <Content Include="admin\assets\file-uploader\js\jquery.fileupload-video.js" />
+    <Content Include="admin\assets\file-uploader\js\jquery.fileupload.js" />
+    <Content Include="admin\assets\file-uploader\js\jquery.iframe-transport.js" />
+    <Content Include="admin\assets\file-uploader\js\main.js" />
+    <Content Include="admin\assets\file-uploader\js\vendor\jquery.ui.widget.js" />
+    <Content Include="admin\assets\flot\jquery.flot.crosshair.js" />
+    <Content Include="admin\assets\flot\jquery.flot.js" />
+    <Content Include="admin\assets\flot\jquery.flot.pie.js" />
+    <Content Include="admin\assets\flot\jquery.flot.resize.js" />
+    <Content Include="admin\assets\flot\jquery.flot.stack.js" />
+    <Content Include="admin\assets\font-awesome\css\font-awesome.css" />
+    <Content Include="admin\assets\font-awesome\css\font-awesome.min.css" />
+    <Content Include="admin\assets\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="admin\assets\fuelux\css\tree-style.css" />
+    <Content Include="admin\assets\fuelux\img\tree-icons.png" />
+    <Content Include="admin\assets\fuelux\js\spinner.min.js" />
+    <Content Include="admin\assets\fuelux\js\tree.min.js" />
+    <Content Include="admin\assets\fullcalendar\fullcalendar\bootstrap-fullcalendar.css" />
+    <Content Include="admin\assets\fullcalendar\fullcalendar\fullcalendar.min.js" />
+    <Content Include="admin\assets\gritter\css\jquery.gritter.css" />
+    <Content Include="admin\assets\gritter\images\gritter-light.png" />
+    <Content Include="admin\assets\gritter\images\gritter.png" />
+    <Content Include="admin\assets\gritter\images\ie-spacer.gif" />
+    <Content Include="admin\assets\gritter\js\jquery.gritter.js" />
+    <Content Include="admin\assets\jcrop\css\Jcrop.gif" />
+    <Content Include="admin\assets\jcrop\css\jquery.Jcrop.min.css" />
+    <Content Include="admin\assets\jcrop\js\jquery.color.js" />
+    <Content Include="admin\assets\jcrop\js\jquery.Jcrop.min.js" />
+    <Content Include="admin\assets\jquery-easy-pie-chart\jquery.easy-pie-chart.css" />
+    <Content Include="admin\assets\jquery-easy-pie-chart\jquery.easy-pie-chart.js" />
+    <Content Include="admin\assets\jquery-file-upload\css\jquery.fileupload-ui.css" />
+    <Content Include="admin\assets\jquery-file-upload\img\loading.gif" />
+    <Content Include="admin\assets\jquery-file-upload\img\progressbar.gif" />
+    <Content Include="admin\assets\jquery-file-upload\js\jquery.fileupload-fp.js" />
+    <Content Include="admin\assets\jquery-file-upload\js\jquery.fileupload-ui.js" />
+    <Content Include="admin\assets\jquery-file-upload\js\jquery.fileupload.js" />
+    <Content Include="admin\assets\jquery-file-upload\js\jquery.iframe-transport.js" />
+    <Content Include="admin\assets\jquery-file-upload\js\vendor\canvas-to-blob.min.js" />
+    <Content Include="admin\assets\jquery-file-upload\js\vendor\jquery.ui.widget.js" />
+    <Content Include="admin\assets\jquery-file-upload\js\vendor\load-image.min.js" />
+    <Content Include="admin\assets\jquery-file-upload\js\vendor\tmpl.min.js" />
+    <Content Include="admin\assets\jquery-knob\js\jquery.knob.js" />
+    <Content Include="admin\assets\jquery-multi-select\css\multi-select.css" />
+    <Content Include="admin\assets\jquery-multi-select\img\switch.png" />
+    <Content Include="admin\assets\jquery-multi-select\js\jquery.multi-select.js" />
+    <Content Include="admin\assets\jquery-multi-select\js\jquery.quicksearch.js" />
+    <Content Include="admin\assets\jquery-ui\images\animated-overlay.gif" />
+    <Content Include="admin\assets\jquery-ui\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="admin\assets\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="admin\assets\jquery-ui\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="admin\assets\jquery-ui\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="admin\assets\morris.js-0.4.3\morris.css" />
+    <Content Include="admin\assets\morris.js-0.4.3\morris.min.js" />
+    <Content Include="admin\assets\morris.js-0.4.3\raphael-min.js" />
+    <Content Include="admin\assets\nestable\jquery.nestable.css" />
+    <Content Include="admin\assets\nestable\jquery.nestable.js" />
+    <Content Include="admin\assets\summernote\dist\summernote.css" />
+    <Content Include="admin\assets\summernote\dist\summernote.min.js" />
+    <Content Include="admin\assets\toastr-master\toastr.css" />
+    <Content Include="admin\assets\toastr-master\toastr.js" />
+    <Content Include="admin\assets\xchart\d3.v3.min.js" />
+    <Content Include="admin\assets\xchart\xcharts.css" />
+    <Content Include="admin\assets\xchart\xcharts.min.js" />
+    <Content Include="admin\Category.aspx" />
+    <Content Include="admin\css\bootstrap-reset.css" />
+    <Content Include="admin\css\bootstrap.min.css" />
+    <Content Include="admin\css\gallery.css" />
+    <Content Include="admin\css\image-crop.css" />
+    <Content Include="admin\css\invoice-print.css" />
+    <Content Include="admin\css\jquery.steps.css" />
+    <Content Include="admin\css\main.css" />
+    <Content Include="admin\css\opensans.css" />
+    <Content Include="admin\css\owl.carousel.css" />
+    <Content Include="admin\css\slidebars.css" />
+    <Content Include="admin\css\soon.css" />
+    <Content Include="admin\css\style-responsive.css" />
+    <Content Include="admin\css\style.css" />
+    <Content Include="admin\css\table-responsive.css" />
+    <Content Include="admin\css\tasks.css" />
+    <Content Include="admin\css\yamm.css" />
+    <Content Include="admin\Default.aspx" />
+    <Content Include="admin\fonts\glyphicons-halflings-regular-2.html" />
+    <Content Include="admin\fonts\glyphicons-halflings-regular.html" />
+    <Content Include="admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="admin\img\404_icon.png" />
+    <Content Include="admin\img\500_icon.png" />
+    <Content Include="admin\img\arrow-up.png" />
+    <Content Include="admin\img\avatar-mini.jpg" />
+    <Content Include="admin\img\avatar-mini2.jpg" />
+    <Content Include="admin\img\avatar-mini3.jpg" />
+    <Content Include="admin\img\avatar-mini4.jpg" />
+    <Content Include="admin\img\avatar1.jpg" />
+    <Content Include="admin\img\avatar1_small.jpg" />
+    <Content Include="admin\img\blue-bg.jpg" />
+    <Content Include="admin\img\chart-texture.jpg" />
+    <Content Include="admin\img\chat-attach.jpg" />
+    <Content Include="admin\img\chat-avatar.jpg" />
+    <Content Include="admin\img\chat-avatar2.jpg" />
+    <Content Include="admin\img\chat-search.png" />
+    <Content Include="admin\img\checkbox\check-off.png" />
+    <Content Include="admin\img\checkbox\check-on.png" />
+    <Content Include="admin\img\checkbox\radio-off.png" />
+    <Content Include="admin\img\checkbox\radio-on.png" />
+    <Content Include="admin\img\customSelect-arrow.gif" />
+    <Content Include="admin\img\dark-bg.jpg" />
+    <Content Include="admin\img\email-img\banner.jpg" />
+    <Content Include="admin\img\email-img\icon-cal.png" />
+    <Content Include="admin\img\email-img\icon-tel.png" />
+    <Content Include="admin\img\email-img\image1.png" />
+    <Content Include="admin\img\email-img\image2.png" />
+    <Content Include="admin\img\email-img\image3.png" />
+    <Content Include="admin\img\email-img\image4.png" />
+    <Content Include="admin\img\email-img\main-img.png" />
+    <Content Include="admin\img\email-img\social-facebook.png" />
+    <Content Include="admin\img\email-img\social-google.png" />
+    <Content Include="admin\img\email-img\social-linkedin.png" />
+    <Content Include="admin\img\email-img\social-twitter.png" />
+    <Content Include="admin\img\email-img\social-youtube.png" />
+    <Content Include="admin\img\email-img\vector-lab.jpg" />
+    <Content Include="admin\img\favicon-2.html" />
+    <Content Include="admin\img\favicon.html" />
+    <Content Include="admin\img\fb-img.jpg" />
+    <Content Include="admin\img\file-search\ai.png" />
+    <Content Include="admin\img\file-search\doc.png" />
+    <Content Include="admin\img\file-search\email.png" />
+    <Content Include="admin\img\file-search\eps.png" />
+    <Content Include="admin\img\file-search\jpg.png" />
+    <Content Include="admin\img\file-search\pdf.png" />
+    <Content Include="admin\img\file-search\ppt.png" />
+    <Content Include="admin\img\file-search\psd.png" />
+    <Content Include="admin\img\file-search\rss.png" />
+    <Content Include="admin\img\file-search\xls.png" />
+    <Content Include="admin\img\file-search\zip.png" />
+    <Content Include="admin\img\flags\de.png" />
+    <Content Include="admin\img\flags\es.png" />
+    <Content Include="admin\img\flags\fr.png" />
+    <Content Include="admin\img\flags\ru.png" />
+    <Content Include="admin\img\flags\us.png" />
+    <Content Include="admin\img\follower-avatar.jpg" />
+    <Content Include="admin\img\gallery\1.jpg" />
+    <Content Include="admin\img\gallery\2.jpg" />
+    <Content Include="admin\img\gallery\3.jpg" />
+    <Content Include="admin\img\gallery\4.jpg" />
+    <Content Include="admin\img\gallery\5.jpg" />
+    <Content Include="admin\img\gallery\6.jpg" />
+    <Content Include="admin\img\green-bg.jpg" />
+    <Content Include="admin\img\input-spinner.gif" />
+    <Content Include="admin\img\left-arrow.png" />
+    <Content Include="admin\img\lock-bg.jpg" />
+    <Content Include="admin\img\mail-avatar.jpg" />
+    <Content Include="admin\img\mask.png" />
+    <Content Include="admin\img\mega-menu\corner_image.jpg" />
+    <Content Include="admin\img\mega-menu\mega-menu-images1.jpg" />
+    <Content Include="admin\img\mega-menu\mega-menu-images2.jpg" />
+    <Content Include="admin\img\mega-menu\mega-menu-images3.jpg" />
+    <Content Include="admin\img\mega-menu\mega-menu-images4.jpg" />
+    <Content Include="admin\img\mega-menu\mega-menu-images5.jpg" />
+    <Content Include="admin\img\mega-menu\mega-menu-images6.jpg" />
+    <Content Include="admin\img\mega_icon1.png" />
+    <Content Include="admin\img\mega_icon2.png" />
+    <Content Include="admin\img\mega_icon3.png" />
+    <Content Include="admin\img\mega_icon4.png" />
+    <Content Include="admin\img\nav-expand.png" />
+    <Content Include="admin\img\photos\user1.png" />
+    <Content Include="admin\img\photos\user2.png" />
+    <Content Include="admin\img\photos\user3.png" />
+    <Content Include="admin\img\photos\user4.png" />
+    <Content Include="admin\img\photos\user5.png" />
+    <Content Include="admin\img\pro-ac-1.png" />
+    <Content Include="admin\img\pro-ac-2.png" />
+    <Content Include="admin\img\product-list\pro-1.jpg" />
+    <Content Include="admin\img\product-list\pro-thumb-1.jpg" />
+    <Content Include="admin\img\product-list\pro-thumb-2.jpg" />
+    <Content Include="admin\img\product-list\pro-thumb-3.jpg" />
+    <Content Include="admin\img\product-list\pro-thumb-big.jpg" />
+    <Content Include="admin\img\product-list\pro1.jpg" />
+    <Content Include="admin\img\product-list\pro2.jpg" />
+    <Content Include="admin\img\product-list\pro3.jpg" />
+    <Content Include="admin\img\product1.jpg" />
+    <Content Include="admin\img\product2.png" />
+    <Content Include="admin\img\product3.png" />
+    <Content Include="admin\img\profile-avatar.jpg" />
+    <Content Include="admin\img\purple-bg.jpg" />
+    <Content Include="admin\img\right-arrow.png" />
+    <Content Include="admin\img\ring.jpg" />
+    <Content Include="admin\img\search-icon-white.png" />
+    <Content Include="admin\img\search-icon.png" />
+    <Content Include="admin\img\slider\1.jpg" />
+    <Content Include="admin\img\sm-img-1.jpg" />
+    <Content Include="admin\img\sm-img-2.jpg" />
+    <Content Include="admin\img\sm-img-3.jpg" />
+    <Content Include="admin\img\vector-lab.jpg" />
+    <Content Include="admin\js\advanced-form-components.js" />
+    <Content Include="admin\js\all-chartjs.js" />
+    <Content Include="admin\js\bootstrap-switch.js" />
+    <Content Include="admin\js\bootstrap-validator.min.js" />
+    <Content Include="admin\js\bootstrap.min.js" />
+    <Content Include="admin\js\common-scripts.js" />
+    <Content Include="admin\js\count.js" />
+    <Content Include="admin\js\draggable-portlet.js" />
+    <Content Include="admin\js\dynamic_table_init.js" />
+    <Content Include="admin\js\easy-pie-chart.js" />
+    <Content Include="admin\js\editable-table.js" />
+    <Content Include="admin\js\external-dragging-calendar.js" />
+    <Content Include="admin\js\flot-chart.js" />
+    <Content Include="admin\js\form-component.js" />
+    <Content Include="admin\js\form-image-crop.js" />
+    <Content Include="admin\js\form-validation-script.js" />
+    <Content Include="admin\js\ga.js" />
+    <Content Include="admin\js\gmaps-scripts.js" />
+    <Content Include="admin\js\gmaps.js" />
+    <Content Include="admin\js\gritter.js" />
+    <Content Include="admin\js\hover-dropdown.js" />
+    <Content Include="admin\js\jquery-migrate-1.2.1.min.js" />
+    <Content Include="admin\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="admin\js\jquery.customSelect.min.js" />
+    <Content Include="admin\js\jquery.dcjqaccordion.2.7.js" />
+    <Content Include="admin\js\jquery.js" />
+    <Content Include="admin\js\jquery.nicescroll.js" />
+    <Content Include="admin\js\jquery.pulsate.min.js" />
+    <Content Include="admin\js\jquery.scrollTo.min.js" />
+    <Content Include="admin\js\jquery.sparkline.js" />
+    <Content Include="admin\js\jquery.steps.min.js" />
+    <Content Include="admin\js\jquery.stepy.js" />
+    <Content Include="admin\js\jquery.tagsinput.js" />
+    <Content Include="admin\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="admin\js\jquery.validate.min.js" />
+    <Content Include="admin\js\modernizr.custom.js" />
+    <Content Include="admin\js\morris-script.js" />
+    <Content Include="admin\js\nestable.js" />
+    <Content Include="admin\js\owl.carousel.js" />
+    <Content Include="admin\js\pulstate.js" />
+    <Content Include="admin\js\respond.min.js" />
+    <Content Include="admin\js\slidebars.min.js" />
+    <Content Include="admin\js\sliders.js" />
+    <Content Include="admin\js\soon\custom.js" />
+    <Content Include="admin\js\soon\plugins.js" />
+    <Content Include="admin\js\sparkline-chart.js" />
+    <Content Include="admin\js\tasks.js" />
+    <Content Include="admin\js\toucheffects.js" />
+    <Content Include="admin\js\tree.js" />
+    <Content Include="admin\Login.aspx" />
+    <Content Include="admin\Post.aspx" />
+    <Content Include="admin\PostEdit.aspx" />
+    <Content Include="admin\SideMenu.ascx" />
+    <Content Include="admin\User.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Admin.master.cs">
+      <DependentUpon>Admin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Post.aspx.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Post.aspx.designer.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\PostEdit.aspx.cs">
+      <DependentUpon>PostEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\PostEdit.aspx.designer.cs">
+      <DependentUpon>PostEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SideMenu.ascx.cs">
+      <DependentUpon>SideMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SideMenu.ascx.designer.cs">
+      <DependentUpon>SideMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>NgoBach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Models.cs" />
+    <Compile Include="NgoBach.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NgoBach.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NgoBach.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NgoBach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NgoBach.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NgoBach.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Post.cs">
+      <DependentUpon>NgoBach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>NgoBach.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\assets\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="admin\assets\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="admin\assets\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="admin\assets\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="admin\assets\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="admin\Admin.master" />
+    <Content Include="admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="admin\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="admin\fonts\open-sans-v13-latin_vietnamese-300.woff" />
+    <Content Include="admin\fonts\open-sans-v13-latin_vietnamese-300.woff2" />
+    <Content Include="admin\fonts\open-sans-v13-latin_vietnamese-700.woff" />
+    <Content Include="admin\fonts\open-sans-v13-latin_vietnamese-700.woff2" />
+    <Content Include="admin\fonts\open-sans-v13-latin_vietnamese-regular.woff" />
+    <Content Include="admin\fonts\open-sans-v13-latin_vietnamese-regular.woff2" />
+    <Content Include="packages.config" />
+    <EntityDeploy Include="NgoBach.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NgoBach.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="NgoBach.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NgoBach.edmx</DependentUpon>
+      <LastGenOutput>NgoBach.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="NgoBach.edmx.diagram">
+      <DependentUpon>NgoBach.edmx</DependentUpon>
+    </Content>
+    <Content Include="NgoBach.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NgoBach.edmx</DependentUpon>
+      <LastGenOutput>NgoBach.cs</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5688</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5688/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
