@@ -23,3 +23,6 @@
 .panel-heading .btn {
     margin-top: -5px;
 }
+.img-thumbnail.post-thumbnail {
+    margin-bottom: 5px;
+}

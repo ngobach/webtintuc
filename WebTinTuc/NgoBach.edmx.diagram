@@ -4,12 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="316b01156e9c4cf0a361cdc0495ab114" Name="Main">
-        <EntityTypeShape EntityType="WebTinTuc.Category" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+      <Diagram DiagramId="316b01156e9c4cf0a361cdc0495ab114" Name="Main" ShowGrid="true" DisplayType="false">
+        <EntityTypeShape EntityType="WebTinTuc.Category" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="WebTinTuc.Post" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="WebTinTuc.User" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebTinTuc.User" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
         <AssociationConnector Association="WebTinTuc.FK_Posts_Categories" />
         <AssociationConnector Association="WebTinTuc.FK_Posts_Users" />
+        <EntityTypeShape EntityType="WebTinTuc.Banner" Width="1.75" PointX="3.375" PointY="4.625" />
+        <EntityTypeShape EntityType="WebTinTuc.Event" Width="1.5" PointX="7.125" PointY="3.25" />
+        <EntityTypeShape EntityType="WebTinTuc.Member" Width="1.5" PointX="5.25" PointY="4.625" />
+        <EntityTypeShape EntityType="WebTinTuc.VoteItem" Width="1.5" PointX="8" PointY="0.875" />
+        <EntityTypeShape EntityType="WebTinTuc.Vote" Width="1.5" PointX="5.75" PointY="1" />
+        <AssociationConnector Association="WebTinTuc.FK_VoteItems_Votes" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

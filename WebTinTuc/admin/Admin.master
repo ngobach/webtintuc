@@ -24,6 +24,7 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet"/>
+    <asp:ContentPlaceHolder runat="server" ID="Styles"/>
     <link href="css/main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
@@ -42,7 +43,7 @@
                 <div data-original-title="Toggle Navigation" data-placement="right" class="fa fa-bars tooltips"></div>
             </div>
             <!--logo start-->
-            <a href="#" class="logo">CNTT<span>EPU</span></a>
+            <a href="/" class="logo">CNTT<span>EPU</span></a>
             <!--logo end-->
             <div class="top-nav ">
                 <ul class="nav pull-right top-menu">
@@ -124,6 +125,7 @@
     <!--common script for all pages-->
     <script src="js/common-scripts.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
+    <script type="text/javascript" src="/admin/assets/bootstrap-filestyle/bootstrap-filestyle.js"></script>
     <asp:ContentPlaceHolder runat="server" ID="Scripts"/>
 </form>
 </body>

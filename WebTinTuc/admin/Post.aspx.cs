@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 
 namespace WebTinTuc.admin
 {
@@ -22,6 +23,7 @@ namespace WebTinTuc.admin
             using (var db = new DB())
             {
                 var posts = from post in db.Posts
+                            orderby post.Updated descending
                             select new
                             {
                                 post.ID,
@@ -45,8 +47,11 @@ namespace WebTinTuc.admin
             {
                 using (var db = new DB())
                 {
-                    var post = new WebTinTuc.Post {ID = id};
-                    db.Posts.Attach(post);
+                    var post = db.Posts.First(p => p.ID == id);
+                    if (post.HasThumbnail)
+                    {
+                        File.Delete(Server.MapPath("~/uploads/" + post.Thumbnail));
+                    }
                     db.Posts.Remove(post);
                     db.SaveChanges();
                 }

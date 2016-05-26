@@ -29,5 +29,23 @@
             <span>Quản lý banner</span>
         </a>
     </li>
+    <li>
+        <a href="Member.aspx">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <span>Quản lý thành viên</span>
+        </a>
+    </li>
+    <li>
+        <a href="Event.aspx">
+            <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+            <span>Quản lý sự kiện</span>
+        </a>
+    </li>
+    <li>
+        <a href="Vote.aspx">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <span>Quản lý thăm dò ý kiến</span>
+        </a>
+    </li>
     <!--multi level menu end-->
 </ul>

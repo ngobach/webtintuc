@@ -28,5 +28,10 @@ namespace WebTinTuc
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Post> Posts { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Banner> Banners { get; set; }
+        public virtual DbSet<Event> Events { get; set; }
+        public virtual DbSet<Member> Members { get; set; }
+        public virtual DbSet<VoteItem> VoteItems { get; set; }
+        public virtual DbSet<Vote> Votes { get; set; }
     }
 }

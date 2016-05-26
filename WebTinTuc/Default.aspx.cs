@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +12,12 @@ namespace WebTinTuc
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Redirect("~/admin/Default.aspx");
+            if (IsPostBack) return;
+            using (var db = new DB())
+            {
+                rpPost.DataSource = db.Posts.Where(p => p.Published).OrderByDescending(p=>p.Updated).Include(p=>p.User).Include(p=>p.Category).Take(5).ToList();
+                rpPost.DataBind();
+            }
         }
     }
 }

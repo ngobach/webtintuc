@@ -14,14 +14,15 @@
                         <HeaderStyle Width="100px"></HeaderStyle>
                     </asp:BoundField>
                     <asp:BoundField DataField="Title" HeaderText="Tiêu đề"/>
-                    <asp:BoundField DataField="Description" HeaderText="Mô tả"/>
-                    <asp:TemplateField HeaderText="Đã xuất bản">
+                    <asp:TemplateField HeaderText="Trạng thái">
                         <ItemTemplate>
-                            <%# ((bool)Eval("Published"))?"Có":"Không"%>
+                            <%# ((bool)Eval("Published"))?"<span class=\"label label-success\">Đã xuất bản</span>":"<span class=\"label label-default\">Chưa xuất bản</span>"%>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="Cate" HeaderText="Danh mục"/>
-                    <asp:BoundField DataField="Owner" HeaderText="Tác giả"/>
+                    <asp:BoundField DataField="Owner" HeaderText="Tác giả">
+                        <ItemStyle Font-Bold="True"/>
+                    </asp:BoundField>
                     <asp:BoundField DataField="Updated" HeaderText="Đăng lúc" DataFormatString="{0:dd/MM/yyyy HH:mm:ss}">
                         <HeaderStyle Width="200px"></HeaderStyle>
                     </asp:BoundField>
