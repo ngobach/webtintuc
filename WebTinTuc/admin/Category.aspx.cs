@@ -65,7 +65,7 @@ namespace WebTinTuc.admin
             using (var db = new DB())
                 if (e.CommandName == "Xoa")
                 {
-                    WebTinTuc.Category cat = new WebTinTuc.Category {ID = Convert.ToInt32(e.CommandArgument.ToString())};
+                    var cat = new WebTinTuc.Category {ID = Convert.ToInt32(e.CommandArgument.ToString())};
                     db.Categories.Attach(cat);
                     db.Categories.Remove(cat);
                     db.SaveChanges();

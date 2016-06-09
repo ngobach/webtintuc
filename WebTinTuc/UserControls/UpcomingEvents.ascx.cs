@@ -14,7 +14,7 @@ namespace WebTinTuc.UserControls
             if (IsPostBack) return;
             using (var db = new DB())
             {
-                rep.DataSource = db.Events.Where(ev => ev.Start >= DateTime.Now).OrderBy(ev=>ev.Start).Take(5).ToList();
+                rep.DataSource = db.Events.Where(ev => ev.End >= DateTime.Now).OrderBy(ev=>ev.Start).Take(5).ToList();
                 rep.DataBind();
             }
         }
